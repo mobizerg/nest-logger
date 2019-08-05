@@ -1,7 +1,7 @@
 {
   "name": "@mobizerg/nest-logger",
   "description": "A morgan + winston custom logger integration module for nestjs framework",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Mobizerg",
   "license": "MIT",
   "main": "index.js",
