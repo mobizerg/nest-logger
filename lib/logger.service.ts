@@ -5,6 +5,8 @@ import * as morgan from 'morgan';
 import { LoggerModuleOptions } from './interfaces';
 import { LOGGER_MODULE_OPTIONS } from './logger.constant';
 
+morgan.token('timestamp', (req, res) => new Date().toLocaleString());
+
 @Injectable()
 export class LoggerService implements NestLoggerService {
 
