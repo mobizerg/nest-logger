@@ -1,7 +1,7 @@
 {
   "name": "@mobizerg/nest-logger",
   "description": "A morgan + winston custom logger integration module for nestjs framework",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Mobizerg",
   "license": "MIT",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "build": "rimraf dist && tsc -p tsconfig.json",
     "pre-commit": "lint-staged",
     "pre-publish:npm": "npm run build",
-    "publish:npm": "npm publish --access public"
+    "publish:npm": "npm run build && npm publish --access public"
   },
   "devDependencies": {
     "@nestjs/common": "^6.5.3",
