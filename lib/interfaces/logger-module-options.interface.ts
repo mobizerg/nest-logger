@@ -4,7 +4,6 @@ import { LoggerOptions } from 'winston';
 export interface LoggerModuleOptions {
   name?: string;
   loggerOptions?: LoggerOptions;
-  loggerFormat?: string;
 }
 
 export interface LoggerOptionsFactory {

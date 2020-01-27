@@ -1,7 +1,7 @@
 import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
 import { LoggerModuleAsyncOptions, LoggerModuleOptions, LoggerOptionsFactory } from './interfaces';
 import { LOGGER_MODULE_OPTIONS } from './logger.constant';
-import { LoggerService } from './logger.service';
+import { Logger } from './logger.service';
 
 @Global()
 @Module({})
@@ -12,9 +12,9 @@ export class LoggerCoreModule {
       module: LoggerCoreModule,
       providers: [
         { provide: LOGGER_MODULE_OPTIONS, useValue: options },
-        LoggerService,
+        Logger,
       ],
-      exports: [LoggerService],
+      exports: [Logger],
     };
   }
 
@@ -24,9 +24,9 @@ export class LoggerCoreModule {
       imports: options.imports || [],
       providers: [
         ...this.createAsyncProviders(options),
-        LoggerService,
+        Logger,
       ],
-      exports: [LoggerService],
+      exports: [Logger],
     };
   }
 

@@ -1,14 +1,13 @@
 {
   "name": "@mobizerg/nest-logger",
-  "description": "A morgan + winston custom logger integration module for nestjs framework",
-  "version": "0.0.4",
+  "description": "Winston logger integration module for nestjs framework",
+  "version": "0.0.5",
   "author": "Mobizerg",
   "license": "MIT",
   "main": "index.js",
   "keywords": [
     "nestjs",
     "logger",
-    "morgan",
     "winston",
     "typescript",
     "mobizerg"
@@ -21,7 +20,6 @@
   },
   "devDependencies": {
     "@nestjs/common": "^6.5.3",
-    "@types/morgan": "^1.7.36",
     "husky": "^3.0.2",
     "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
@@ -32,7 +30,6 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
-    "morgan": "^1.9.1",
     "winston": "^3.2.1"
   },
   "peerDependencies": {
