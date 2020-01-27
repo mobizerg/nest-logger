@@ -1,7 +1,7 @@
 {
   "name": "@mobizerg/nest-logger",
   "description": "Winston logger integration module for nestjs framework",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Mobizerg",
   "license": "MIT",
   "main": "index.js",
