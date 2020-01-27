@@ -23,22 +23,22 @@ export class Logger implements LoggerService {
   }
 
   debug(message: string, context?: string): void {
-    this.logger.debug(`${context ? '[' + context + '] ' : ''}${message}`, context);
+    this.logger.debug(message, [context]);
   }
 
   error(message: string, trace?: string, context?: string): void {
-    this.logger.error(`${context ? '[' + context + '] ' : ''}${message}`, trace, context);
+    this.logger.error(message, [trace, context]);
   }
 
   log(message: string, context?: string): void {
-    this.logger.info(`${context ? '[' + context + '] ' : ''}${message}`, context);
+    this.logger.info(message, [context]);
   }
 
   verbose(message: string, context?: string): void {
-    this.logger.verbose(`${context ? '[' + context + '] ' : ''}${message}`, context);
+    this.logger.verbose(message, [context]);
   }
 
   warn(message: string, context?: string): void {
-    this.logger.warn(`${context ? '[' + context + '] ' : ''}${message}`, context);
+    this.logger.warn(message, [context]);
   }
 }
