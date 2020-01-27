@@ -5,25 +5,23 @@
 </p>
 
 <p align="center">
-A Morgan + Winston custom logger integration module for Nest.js framework.
+Winston custom logger integration module for Nest.js framework.
 </p>
 
 ### Installation
 
 **Yarn**
 ```bash
-yarn add @mobizerg/nest-logger morgan winston
-yarn add @types/morgan --dev
+yarn add @mobizerg/nest-logger winston
 ```
 
 **NPM**
 ```bash
-npm install @mobizerg/nest-logger morgan winston --save
-npm install @types/morgan --save-dev
+npm install @mobizerg/nest-logger winston --save
 ```
 
 ### Description
-Custom logger module for [Nest.js](https://github.com/nestjs/nest) based on [Morgan](https://github.com/expressjs/morgan) & [Winston](https://github.com/winstonjs/winston) package.
+Custom logger module for [Nest.js](https://github.com/nestjs/nest) based on [Winston](https://github.com/winstonjs/winston) package.
 
 ### Usage
 
@@ -78,8 +76,6 @@ export class LoggerConfigService implements LoggerOptionsFactory {
         format: format.cli(),
         transports: [new transports.Console()]
       },
-      // Morgan logger format
-      loggerFormat: ':method :status :url :response-time ms - :remote-addr :user-agent HTTP/:http-version :res[content-length]'
     };
   }
 }
@@ -96,10 +92,6 @@ async function bootstrap() {
   const server = express();
   const app = await NestFactory.create(AppModule, { logger: false });
   const logger = app.get(LoggerService);
- 
-  app.use(logger.logInfo());
-  app.use(logger.logError());
-    
   app.useLogger(logger);
 }
 ```
