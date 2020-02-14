@@ -22,23 +22,27 @@ export class LoggerService implements NestLoggerService {
     }
   }
 
-  debug(message: string, context?: string): void {
-    this.logger.debug(message, { context });
+  debug(message: any, context?: string): void {
+    this.logger.debug(this.stringify(message), { context });
   }
 
-  error(message: string, trace?: string, context?: string): void {
-    this.logger.error(message, { trace, context });
+  error(message: any, trace?: string, context?: string): void {
+    this.logger.error(this.stringify(message), { trace, context });
   }
 
-  log(message: string, context?: string): void {
-    this.logger.info(message, { context });
+  log(message: any, context?: string): void {
+    this.logger.info(this.stringify(message), { context });
   }
 
-  verbose(message: string, context?: string): void {
-    this.logger.verbose(message, { context });
+  verbose(message: any, context?: string): void {
+    this.logger.verbose(this.stringify(message), { context });
   }
 
-  warn(message: string, context?: string): void {
-    this.logger.warn(message, { context });
+  warn(message: any, context?: string): void {
+    this.logger.warn(this.stringify(message), { context });
+  }
+
+  private stringify(message: any): string {
+    return (typeof message === 'string') ? message : JSON.stringify(message, undefined, 2);
   }
 }
