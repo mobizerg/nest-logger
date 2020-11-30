@@ -1,7 +1,7 @@
 {
   "name": "@mobizerg/nest-logger",
   "description": "Winston logger integration module for nestjs framework",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Mobizerg",
   "license": "MIT",
   "main": "index.js",
@@ -19,23 +19,23 @@
     "publish:npm": "npm run build && npm publish --access public"
   },
   "devDependencies": {
-    "@nestjs/common": "^6.5.3",
-    "husky": "^3.0.2",
-    "lint-staged": "^9.2.1",
-    "prettier": "^1.18.2",
+    "@nestjs/common": "^7.5.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.2",
+    "prettier": "^2.2.1",
     "reflect-metadata": "^0.1.13",
-    "rimraf": "^2.6.3",
-    "rxjs": "^6.5.2",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "rimraf": "^3.0.2",
+    "rxjs": "^6.6.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
   },
   "dependencies": {
-    "winston": "^3.2.1"
+    "winston": "^3.3.3"
   },
   "peerDependencies": {
-    "@nestjs/common": "^6.0.0",
-    "reflect-metadata": "^0.1.12",
-    "rxjs": "^6.0.0"
+    "@nestjs/common": "^7.5.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.0"
   },
   "lint-staged": {
     "*.ts": [
